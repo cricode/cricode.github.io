@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://cricode.github.io/"/>
-  <updated>2015-05-30T05:28:05.881Z</updated>
+  <updated>2015-05-30T05:37:40.573Z</updated>
   <id>http://cricode.github.io/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[用SBT编译Spark应用]]></title>
-    <link href="http://cricode.github.io/2015/05/30/%E7%94%A8SBT%E7%BC%96%E8%AF%91Spark%E5%BA%94%E7%94%A8/"/>
-    <id>http://cricode.github.io/2015/05/30/用SBT编译Spark应用/</id>
+    <title><![CDATA[使用SBT编译Spark应用]]></title>
+    <link href="http://cricode.github.io/2015/05/30/%E4%BD%BF%E7%94%A8SBT%E7%BC%96%E8%AF%91Spark%E5%BA%94%E7%94%A8/"/>
+    <id>http://cricode.github.io/2015/05/30/使用SBT编译Spark应用/</id>
     <published>2015-05-30T05:23:21.000Z</published>
-    <updated>2015-05-30T05:28:05.881Z</updated>
+    <updated>2015-05-30T05:37:40.573Z</updated>
     <content type="html"><![CDATA[<h2 id="sbt介绍">sbt介绍</h2><p>sbt即 Simple Build Tool,是一个构建工具,用来编译scala项目很方便.</p>
 <h2 id="sbt安装">sbt安装</h2><p>官网地址: <a href="http://www.scala-sbt.org/" target="_blank" rel="external">http://www.scala-sbt.org/</a><br>中文参考: <a href="http://www.scala-sbt.org/0.13/tutorial/zh-cn/index.html" target="_blank" rel="external">http://www.scala-sbt.org/0.13/tutorial/zh-cn/index.html</a></p>
 <h4 id="示例:在Ubuntu上安装sbt">示例:在Ubuntu上安装sbt</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"deb http://dl.bintray.com/sbt/debian /"</span> | sudo tee <span class="operator">-a</span> /etc/apt/sources.list.d/sbt.list</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install sbt</span><br></pre></td></tr></table></figure>
