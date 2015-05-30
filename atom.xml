@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://cricode.github.io/"/>
-  <updated>2015-05-27T11:52:46.532Z</updated>
+  <updated>2015-05-30T05:28:05.881Z</updated>
   <id>http://cricode.github.io/</id>
   
   <author>
@@ -13,6 +13,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[用SBT编译Spark应用]]></title>
+    <link href="http://cricode.github.io/2015/05/30/%E7%94%A8SBT%E7%BC%96%E8%AF%91Spark%E5%BA%94%E7%94%A8/"/>
+    <id>http://cricode.github.io/2015/05/30/用SBT编译Spark应用/</id>
+    <published>2015-05-30T05:23:21.000Z</published>
+    <updated>2015-05-30T05:28:05.881Z</updated>
+    <content type="html"><![CDATA[<h2 id="sbt介绍">sbt介绍</h2><p>sbt即 Simple Build Tool,是一个构建工具,用来编译scala项目很方便.</p>
+<h2 id="sbt安装">sbt安装</h2><p>官网地址: <a href="http://www.scala-sbt.org/" target="_blank" rel="external">http://www.scala-sbt.org/</a><br>中文参考: <a href="http://www.scala-sbt.org/0.13/tutorial/zh-cn/index.html" target="_blank" rel="external">http://www.scala-sbt.org/0.13/tutorial/zh-cn/index.html</a></p>
+<h4 id="示例:在Ubuntu上安装sbt">示例:在Ubuntu上安装sbt</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"deb http://dl.bintray.com/sbt/debian /"</span> | sudo tee <span class="operator">-a</span> /etc/apt/sources.list.d/sbt.list</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install sbt</span><br></pre></td></tr></table></figure>
+<h2 id="使用SBT编译spark应用">使用SBT编译spark应用</h2><p>通常情况下,我们的spark应用的目录结构如下所示:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">|--build.sbt</span><br><span class="line">|--lib</span><br><span class="line">|--project</span><br><span class="line">|--src</span><br><span class="line">|   |--main</span><br><span class="line">|   |    |--scala</span><br><span class="line">|   |--test</span><br><span class="line">|         |--scala</span><br><span class="line">|--target</span><br></pre></td></tr></table></figure></p>
+<h4 id="1)编辑build-sbt,_添加项目信息">1)编辑build.sbt, 添加项目信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name := <span class="string">"SparkPiTest"</span> //项目名称</span><br><span class="line"></span><br><span class="line">version := <span class="string">"0.1.0"</span>   //项目版本</span><br><span class="line"></span><br><span class="line">scalaVersion := <span class="string">"2.10.4"</span> //Scala的版本</span><br><span class="line"></span><br><span class="line">libraryDependencies += <span class="string">"org.apache.spark"</span> %% <span class="string">"spark-core"</span> % <span class="string">"1.3.1"</span>  //Spark版本</span><br><span class="line"></span><br><span class="line">resolvers += <span class="string">"Akka Repository"</span> at <span class="string">"http://repo.akka.io/releases/"</span></span><br></pre></td></tr></table></figure>
+<p>build.sbt中指定了项目名称,scla的版本,依赖库等信息.</p>
+<h4 id="2)添加Spark开发包到lib目录下">2)添加Spark开发包到lib目录下</h4><p>例如,将如下jar包copy到lib目录下:<br>spark-assembly-1.3.1-hadoop2.4.0.jar</p>
+<h4 id="3)编写一个spark应用程序">3)编写一个spark应用程序</h4><p>在src/main/scala/目录下新建一个SparkPi.scala应用程序,如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> sparkpi</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> scala.math.random</span><br><span class="line"><span class="keyword">import</span> org.apache.spark._</span><br><span class="line"></span><br><span class="line">object SparkPi&#123;</span><br><span class="line">  <span class="function">def <span class="title">main</span><span class="params">(args: Array[String])</span> </span>&#123;</span><br><span class="line">    val conf = <span class="keyword">new</span> SparkConf().setAppName(<span class="string">"Spark Pi"</span>)</span><br><span class="line">    val spark = <span class="keyword">new</span> SparkContext(conf)</span><br><span class="line">    val slices = <span class="keyword">if</span> (args.length &gt; <span class="number">0</span>) args(<span class="number">0</span>).toInt <span class="keyword">else</span> <span class="number">2</span></span><br><span class="line">    val n = math.min(<span class="number">100000L</span> * slices, Int.MaxValue).toInt <span class="comment">// avoid overflow</span></span><br><span class="line">    val count = spark.parallelize(<span class="number">1</span> until n, slices).map &#123; i =&gt;</span><br><span class="line">      val x = random * <span class="number">2</span> - <span class="number">1</span></span><br><span class="line">      val y = random * <span class="number">2</span> - <span class="number">1</span></span><br><span class="line">      <span class="keyword">if</span> (x*x + y*y &lt; <span class="number">1</span>) <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">    &#125;.reduce(_ + _)</span><br><span class="line">    println(<span class="string">"Pi is roughly "</span> + <span class="number">4.0</span> * count / n)</span><br><span class="line">    spark.stop()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="4)编译与打包">4)编译与打包</h4><p>在项目<strong>根目录</strong>中执行compile和package操作.命令如下:<br>sbt compile     //编译<br>sbt package   //打包</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="sbt介绍">sbt介绍</h2><p>sbt即 Simple Build Tool,是一个构建工具,用来编译scala项目很方便.</p>
+<h2 id="sbt安装">sbt安装</h2><p>官网地址: <a href="http://www.scala-s]]>
+    </summary>
+    
+      <category term="SBT" scheme="http://cricode.github.io/tags/SBT/"/>
+    
+      <category term="Spark" scheme="http://cricode.github.io/tags/Spark/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>

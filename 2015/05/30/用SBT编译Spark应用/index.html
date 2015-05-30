@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>程序员的自我修养</title>
+  <title>用SBT编译Spark应用 | 程序员的自我修养</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="程序员的自我修养">
-<meta property="og:url" content="http://cricode.github.io/index.html">
+  <meta name="description" content="sbt介绍sbt即 Simple Build Tool,是一个构建工具,用来编译scala项目很方便.
+sbt安装官网地址: http://www.scala-sbt.org/中文参考: http://www.scala-sbt.org/0.13/tutorial/zh-cn/index.html
+示例:在Ubuntu上安装sbt123echo &quot;deb http://dl.bintray.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用SBT编译Spark应用">
+<meta property="og:url" content="http://cricode.github.io/2015/05/30/用SBT编译Spark应用/index.html">
 <meta property="og:site_name" content="程序员的自我修养">
-<meta property="og:description">
+<meta property="og:description" content="sbt介绍sbt即 Simple Build Tool,是一个构建工具,用来编译scala项目很方便.
+sbt安装官网地址: http://www.scala-sbt.org/中文参考: http://www.scala-sbt.org/0.13/tutorial/zh-cn/index.html
+示例:在Ubuntu上安装sbt123echo &quot;deb http://dl.bintray.com">
+<meta property="og:updated_time" content="2015-05-30T05:28:05.881Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="程序员的自我修养">
-<meta name="twitter:description">
+<meta name="twitter:title" content="用SBT编译Spark应用">
+<meta name="twitter:description" content="sbt介绍sbt即 Simple Build Tool,是一个构建工具,用来编译scala项目很方便.
+sbt安装官网地址: http://www.scala-sbt.org/中文参考: http://www.scala-sbt.org/0.13/tutorial/zh-cn/index.html
+示例:在Ubuntu上安装sbt123echo &quot;deb http://dl.bintray.com">
   
     <link rel="alternative" href="/atom.xml" title="程序员的自我修养" type="application/atom+xml">
   
@@ -164,9 +171,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-用SBT编译Spark应用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-用SBT编译Spark应用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/05/30/用SBT编译Spark应用/" class="article-date">
@@ -182,12 +187,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/30/用SBT编译Spark应用/">用SBT编译Spark应用</a>
+    <h1 class="article-title" itemprop="name">
+      用SBT编译Spark应用
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SBT/">SBT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spark/">Spark</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -205,86 +221,61 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SBT/">SBT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spark/">Spark</a></li></ul>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/05/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="用SBT编译Spark应用" data-title="用SBT编译Spark应用" data-url="http://cricode.github.io/2015/05/30/用SBT编译Spark应用/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"cricode-git"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/05/27/hello-world/" class="article-date">
-  	<time datetime="2015-05-27T11:52:46.532Z" itemprop="datePublished">2015-05-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/27/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
