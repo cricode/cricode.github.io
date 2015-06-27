@@ -15,7 +15,7 @@
 <meta property="og:description" content="Spark计算平台搭建1.缘由团队当前的计算平台使用公司自研平台搭建.离线与实时计算平台由两拨人分别管理维护,随着新的需求越来越多,现在的计算平台使用不够友好,扩展不够方便,于是打算通过Spark重新搭建一个计算平台.
 2.平台功能1)实时计算任务.主要是完成一些实时性要求较高的日志分析统计.比如应用的pv,uv,停留时间,点击数据等.
 2)离线分析任务.无法通过实时完成统计的数据,例如一些订单数">
-<meta property="og:updated_time" content="2015-06-01T14:45:46.425Z">
+<meta property="og:updated_time" content="2015-06-27T13:42:14.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spark计算平台搭建">
 <meta name="twitter:description" content="Spark计算平台搭建1.缘由团队当前的计算平台使用公司自研平台搭建.离线与实时计算平台由两拨人分别管理维护,随着新的需求越来越多,现在的计算平台使用不够友好,扩展不够方便,于是打算通过Spark重新搭建一个计算平台.
@@ -111,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/SBT/" style="font-size: 10px;">SBT</a> <a href="/tags/Spark/" style="font-size: 20px;">Spark</a> <a href="/tags/实时计算/" style="font-size: 10px;">实时计算</a> <a href="/tags/离线计算/" style="font-size: 10px;">离线计算</a>
+						<a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Python-logging/" style="font-size: 10px;">Python logging</a> <a href="/tags/SBT/" style="font-size: 10px;">SBT</a> <a href="/tags/Spark/" style="font-size: 20px;">Spark</a> <a href="/tags/实时计算/" style="font-size: 10px;">实时计算</a> <a href="/tags/离线计算/" style="font-size: 10px;">离线计算</a>
 					</div>
 				</section>
 				
@@ -213,7 +213,7 @@
 <h4 id="2)离线分析任务-">2)离线分析任务.</h4><p>无法通过实时完成统计的数据,例如一些订单数据分析,需要与第三方进行数据对接的数据等.</p>
 <h4 id="3)自助查询分析-">3)自助查询分析.</h4><p>允许用户通过web UI进行自定义分析查询.<br>这个是比较个性化的需求,比如商家搞了一个活动,可能对一些统计参数进行埋点上报,活动搞完后,需要进行详细的活动效果分析.这时候,通过提供自助查询来进行分析,得到运营人员想要的数据,而不需要我们介入形形色色的个性化统计.</p>
 <h4 id="4)推荐系统">4)推荐系统</h4><p>这个是后期需要考虑实现的.前期已经基于历史数据在公司的spark机群中进行了模型训练及推荐结果分析.<br>机器学习是个不太容易做好的东西,资源消耗也特别大,之前在公司的Spark机群,上千核CPU与单机内存上百G的资源供给下,有时候训练一次模型都要半小时一小时的,估计组内的Spark机群资源用于推荐系统是有点不够.</p>
-<h2 id="3-平台资源">3.平台资源</h2><p>暂时弄了几台机器,搭建Spark on YARN计算平台.<br>计算资源:<br>Centos  12 core CPU  128G  RAM  (5台)<br>Web服务:<br>web服务使用Angularjs + bootstrap + nginx + tornado + Redis +MySQL的组合. </p>
+<h2 id="3-平台资源">3.平台资源</h2><p>暂时弄了几台机器,搭建Spark on YARN计算平台.<br>计算资源:<br>Centos  12 core CPU  128G  RAM  (5台)<br>Web服务:<br>web服务使用jquery + bootstrap + nginx + tornado + Redis +MySQL的组合. </p>
 
       
     </div>
@@ -222,6 +222,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/06/27/Python-Logging-使用指南/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Python Logging　使用指南
+        
+      </div>
+    </a>
   
   
     <a href="/2015/05/30/使用SBT编译Spark应用/" id="article-nav-older" class="article-nav-link-wrap">

@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>程序员的自我修养</title>
+  <title>Python Logging　使用指南 | 程序员的自我修养</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="程序员的自我修养">
-<meta property="og:url" content="http://cricode.github.io/index.html">
+  <meta name="description" content="在开发程序过程中，打一手好的日志，对我们事后追根索源，排查问题至关重要．在初学c或者python时，我们的代码中通常充斥着这样的代码片段：1printf(&quot;a is %d&quot;,a)
+或者123456print &apos;Start reading database&apos;records = model.read_recrods()print &apos;# records&apos;, recordsprint &apos;Updating">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Logging　使用指南">
+<meta property="og:url" content="http://cricode.github.io/2015/06/27/Python-Logging-使用指南/index.html">
 <meta property="og:site_name" content="程序员的自我修养">
-<meta property="og:description">
+<meta property="og:description" content="在开发程序过程中，打一手好的日志，对我们事后追根索源，排查问题至关重要．在初学c或者python时，我们的代码中通常充斥着这样的代码片段：1printf(&quot;a is %d&quot;,a)
+或者123456print &apos;Start reading database&apos;records = model.read_recrods()print &apos;# records&apos;, recordsprint &apos;Updating">
+<meta property="og:updated_time" content="2015-06-27T13:43:16.514Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="程序员的自我修养">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Python Logging　使用指南">
+<meta name="twitter:description" content="在开发程序过程中，打一手好的日志，对我们事后追根索源，排查问题至关重要．在初学c或者python时，我们的代码中通常充斥着这样的代码片段：1printf(&quot;a is %d&quot;,a)
+或者123456print &apos;Start reading database&apos;records = model.read_recrods()print &apos;# records&apos;, recordsprint &apos;Updating">
   
     <link rel="alternative" href="/atom.xml" title="程序员的自我修养" type="application/atom+xml">
   
@@ -164,9 +168,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Python-Logging-使用指南" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Python-Logging-使用指南" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/06/27/Python-Logging-使用指南/" class="article-date">
@@ -182,12 +184,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/27/Python-Logging-使用指南/">Python Logging　使用指南</a>
+    <h1 class="article-title" itemprop="name">
+      Python Logging　使用指南
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python-logging/">Python logging</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -213,205 +226,61 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python-logging/">Python logging</a></li></ul>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/06/01/Spark计算平台搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spark计算平台搭建</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Python-Logging-使用指南" data-title="Python Logging　使用指南" data-url="http://cricode.github.io/2015/06/27/Python-Logging-使用指南/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"cricode-git"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
-  
-    <article id="post-Spark计算平台搭建" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/06/01/Spark计算平台搭建/" class="article-date">
-  	<time datetime="2015-06-01T14:43:54.000Z" itemprop="datePublished">2015-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/01/Spark计算平台搭建/">Spark计算平台搭建</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Spark计算平台搭建">Spark计算平台搭建</h1><h2 id="1-缘由">1.缘由</h2><p>团队当前的计算平台使用公司自研平台搭建.离线与实时计算平台由两拨人分别管理维护,随着新的需求越来越多,现在的计算平台使用不够友好,扩展不够方便,于是打算通过Spark重新搭建一个计算平台.</p>
-<h2 id="2-平台功能">2.平台功能</h2><h4 id="1)实时计算任务-">1)实时计算任务.</h4><p>主要是完成一些实时性要求较高的日志分析统计.比如应用的pv,uv,停留时间,点击数据等.</p>
-<h4 id="2)离线分析任务-">2)离线分析任务.</h4><p>无法通过实时完成统计的数据,例如一些订单数据分析,需要与第三方进行数据对接的数据等.</p>
-<h4 id="3)自助查询分析-">3)自助查询分析.</h4><p>允许用户通过web UI进行自定义分析查询.<br>这个是比较个性化的需求,比如商家搞了一个活动,可能对一些统计参数进行埋点上报,活动搞完后,需要进行详细的活动效果分析.这时候,通过提供自助查询来进行分析,得到运营人员想要的数据,而不需要我们介入形形色色的个性化统计.</p>
-<h4 id="4)推荐系统">4)推荐系统</h4><p>这个是后期需要考虑实现的.前期已经基于历史数据在公司的spark机群中进行了模型训练及推荐结果分析.<br>机器学习是个不太容易做好的东西,资源消耗也特别大,之前在公司的Spark机群,上千核CPU与单机内存上百G的资源供给下,有时候训练一次模型都要半小时一小时的,估计组内的Spark机群资源用于推荐系统是有点不够.</p>
-<h2 id="3-平台资源">3.平台资源</h2><p>暂时弄了几台机器,搭建Spark on YARN计算平台.<br>计算资源:<br>Centos  12 core CPU  128G  RAM  (5台)<br>Web服务:<br>web服务使用jquery + bootstrap + nginx + tornado + Redis +MySQL的组合. </p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spark/">Spark</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/实时计算/">实时计算</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/离线计算/">离线计算</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-使用SBT编译Spark应用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/05/30/使用SBT编译Spark应用/" class="article-date">
-  	<time datetime="2015-05-30T05:23:21.000Z" itemprop="datePublished">2015-05-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/30/使用SBT编译Spark应用/">使用SBT编译Spark应用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="sbt介绍">sbt介绍</h2><p>sbt即 Simple Build Tool,是一个构建工具,用来编译scala项目很方便.</p>
-<h2 id="sbt安装">sbt安装</h2><p>官网地址: <a href="http://www.scala-sbt.org/" target="_blank" rel="external">http://www.scala-sbt.org/</a><br>中文参考: <a href="http://www.scala-sbt.org/0.13/tutorial/zh-cn/index.html" target="_blank" rel="external">http://www.scala-sbt.org/0.13/tutorial/zh-cn/index.html</a></p>
-<h4 id="示例:在Ubuntu上安装sbt">示例:在Ubuntu上安装sbt</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"deb http://dl.bintray.com/sbt/debian /"</span> | sudo tee <span class="operator">-a</span> /etc/apt/sources.list.d/sbt.list</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install sbt</span><br></pre></td></tr></table></figure>
-<h2 id="使用SBT编译spark应用">使用SBT编译spark应用</h2><p>通常情况下,我们的spark应用的目录结构如下所示:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">|--build.sbt</span><br><span class="line">|--lib</span><br><span class="line">|--project</span><br><span class="line">|--src</span><br><span class="line">|   |--main</span><br><span class="line">|   |    |--scala</span><br><span class="line">|   |--test</span><br><span class="line">|         |--scala</span><br><span class="line">|--target</span><br></pre></td></tr></table></figure></p>
-<h4 id="1)编辑build-sbt,_添加项目信息">1)编辑build.sbt, 添加项目信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name := <span class="string">"SparkPiTest"</span> //项目名称</span><br><span class="line"></span><br><span class="line">version := <span class="string">"0.1.0"</span>   //项目版本</span><br><span class="line"></span><br><span class="line">scalaVersion := <span class="string">"2.10.4"</span> //Scala的版本</span><br><span class="line"></span><br><span class="line">libraryDependencies += <span class="string">"org.apache.spark"</span> %% <span class="string">"spark-core"</span> % <span class="string">"1.3.1"</span>  //Spark版本</span><br><span class="line"></span><br><span class="line">resolvers += <span class="string">"Akka Repository"</span> at <span class="string">"http://repo.akka.io/releases/"</span></span><br></pre></td></tr></table></figure>
-<p>build.sbt中指定了项目名称,scla的版本,依赖库等信息.</p>
-<h4 id="2)添加Spark开发包到lib目录下">2)添加Spark开发包到lib目录下</h4><p>例如,将如下jar包copy到lib目录下:<br>spark-assembly-1.3.1-hadoop2.4.0.jar</p>
-<h4 id="3)编写一个spark应用程序">3)编写一个spark应用程序</h4><p>在src/main/scala/目录下新建一个SparkPi.scala应用程序,如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> sparkpi</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> scala.math.random</span><br><span class="line"><span class="keyword">import</span> org.apache.spark._</span><br><span class="line"></span><br><span class="line">object SparkPi&#123;</span><br><span class="line">  <span class="function">def <span class="title">main</span><span class="params">(args: Array[String])</span> </span>&#123;</span><br><span class="line">    val conf = <span class="keyword">new</span> SparkConf().setAppName(<span class="string">"Spark Pi"</span>)</span><br><span class="line">    val spark = <span class="keyword">new</span> SparkContext(conf)</span><br><span class="line">    val slices = <span class="keyword">if</span> (args.length &gt; <span class="number">0</span>) args(<span class="number">0</span>).toInt <span class="keyword">else</span> <span class="number">2</span></span><br><span class="line">    val n = math.min(<span class="number">100000L</span> * slices, Int.MaxValue).toInt <span class="comment">// avoid overflow</span></span><br><span class="line">    val count = spark.parallelize(<span class="number">1</span> until n, slices).map &#123; i =&gt;</span><br><span class="line">      val x = random * <span class="number">2</span> - <span class="number">1</span></span><br><span class="line">      val y = random * <span class="number">2</span> - <span class="number">1</span></span><br><span class="line">      <span class="keyword">if</span> (x*x + y*y &lt; <span class="number">1</span>) <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">    &#125;.reduce(_ + _)</span><br><span class="line">    println(<span class="string">"Pi is roughly "</span> + <span class="number">4.0</span> * count / n)</span><br><span class="line">    spark.stop()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="4)编译与打包">4)编译与打包</h4><p>在项目<strong>根目录</strong>中执行compile和package操作.命令如下:<br>sbt compile     //编译<br>sbt package   //打包</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SBT/">SBT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spark/">Spark</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/05/27/hello-world/" class="article-date">
-  	<time datetime="2015-05-27T11:52:46.532Z" itemprop="datePublished">2015-05-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/27/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
